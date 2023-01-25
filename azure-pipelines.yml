@@ -48,3 +48,9 @@ steps:
     projects: '**/*.csproj'
     testRunTitle: 'Run test'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'NUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'publish test results'
+
